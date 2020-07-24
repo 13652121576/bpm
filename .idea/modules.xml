@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bmp.iml" filepath="$PROJECT_DIR$/bmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bmp-common/bmp-common.iml" filepath="$PROJECT_DIR$/bmp-common/bmp-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bmp-service/bmp-service.iml" filepath="$PROJECT_DIR$/bmp-service/bmp-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bmp-web/bmp-web.iml" filepath="$PROJECT_DIR$/bmp-web/bmp-web.iml" />
+    </modules>
+  </component>
+</project>

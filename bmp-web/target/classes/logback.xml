@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+  <springProperty scope="context" name="appName" source="spring.application.name"/>
+  <!--
+    <springProperty scope="context" name="LOG_PATH" source="logging.path"/>
+  -->
+
+
+  <property name="LOG_PATH" value="/data/java_log/bmp"/>
+
+  <!--日志存储时间-->
+  <property name="MAX_HISTORY" value="3"/>
+  <!--单个LOG文件最大SIZE-->
+  <property name="MAX_FILE_SIZE" value="500MB"/>
+  <!--所有归档日志最大size, 当超过限制时, 会删掉旧的归档日志-->
+  <property name="TOTAL_SIZE_CAP" value="20GB"/>
+
+  <!--异步写LOG队列size-->
+  <property name="ASYNC_QUEUE_SIZE" value="1024"/>
+  <!--默认情况下, 当blockingQueue容量大于阈值(80%)时，丢弃ERROR以下级别日志, 如果设置为0则不丢弃日志-->
+  <property name="DISCARDING_THRESHOLD" value="0"/>
+
+  <!--profile environment, 配合maven使用-->
+  <property name="PROFILE_ENV" value="prod"/>
+
+  <property name="QUEUE_SIZE" value="512"/>
+  <property name="CONSOLE_PATTERN"
+            value="%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36}: %msg%n"/>
+  <property name="FILE_PATTERN"
+            value="%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36}: %msg%n"/>
+
+  <!--1. 输出到控制台-->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <Pattern>${CONSOLE_PATTERN}</Pattern>
+      <charset>UTF-8</charset>
+    </encoder>
+  </appender>
+
+
+  <!--异步模式输出日志到文件-->
+  <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_PATH}/%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+      <maxFileSize>${MAX_FILE_SIZE}</maxFileSize>
+      <maxHistory>${MAX_HISTORY}</maxHistory>
+      <totalSizeCap>${TOTAL_SIZE_CAP}</totalSizeCap>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{X-B3-TraceId:-},%X{X-B3-SpanId:-}] [%thread]  %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="ASYNC_INFO_FILE" class="ch.qos.logback.classic.AsyncAppender">
+    <queueSize>${QUEUE_SIZE}</queueSize>
+    <appender-ref ref="INFO_FILE"/>
+  </appender>
+
+  <springProfile name="dev">
+    <logger name="com.manage" level="DEBUG"/>
+    <root level="info">
+      <appender-ref ref="CONSOLE"/>
+      <!--
+            <appender-ref ref="ASYNC_WARN_FILE"/>
+      -->
+    </root>
+  </springProfile>
+  <springProfile name="test">
+    <logger name="com.manage" level="DEBUG"/>
+    <root level="info">
+      <appender-ref ref="CONSOLE"/>
+      <appender-ref ref="ASYNC_INFO_FILE"/>
+    </root>
+  </springProfile>
+
+  <springProfile name="prod">
+    <logger name="com.manage" level="INFO"/>
+    <root level="info">
+      <appender-ref ref="ASYNC_INFO_FILE"/>
+    </root>
+  </springProfile>
+
+</configuration>
