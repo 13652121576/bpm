@@ -22,7 +22,7 @@
   <property name="DISCARDING_THRESHOLD" value="0"/>
 
   <!--profile environment, 配合maven使用-->
-  <property name="PROFILE_ENV" value="prod"/>
+  <property name="PROFILE_ENV" value="dev"/>
 
   <property name="QUEUE_SIZE" value="512"/>
   <property name="CONSOLE_PATTERN"

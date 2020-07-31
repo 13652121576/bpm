@@ -18,21 +18,21 @@ public interface SysUserService {
     /**
      * getList的方法
      */
-    public List<SysUser> getList(SysUserDto sysUserDto);
+    List<SysUser> getList(SysUserDto sysUserDto);
 
     /**
      * 新增方法
      */
-    public int create(SysUserDto sysUserDto);
+    int create(SysUserDto sysUserDto);
 
     /**
      * 修改方法
      */
-    public int update(SysUserDto sysUserDto);
+    int update(SysUserDto sysUserDto);
 
     /**
      * 根据id删除方法
      */
-    public int delete(String id);
+    int delete(String id);
 
 }

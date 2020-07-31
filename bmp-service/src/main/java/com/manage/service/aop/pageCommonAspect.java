@@ -3,6 +3,7 @@ package com.manage.service.aop;
 
 import com.github.pagehelper.PageHelper;
 import com.manage.service.annotation.pageHelper;
+import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -31,10 +32,10 @@ public class pageCommonAspect {
 
     @Around(value = "pointcut()")
     public Object authorityHandler(ProceedingJoinPoint point) throws Throwable {
-        logger.info("执行了Aspect方法");
+        logger.debug("执行了Aspect方法");
         Object[] args = point.getArgs();
         int pageNum = 1;
-        int pageSize = 15;
+        int pageSize = 20;
         try {
             for(int i=0;i<args.length;i++){
                 Class<?> aClass = args[i].getClass();
@@ -50,12 +51,16 @@ public class pageCommonAspect {
                     if("pageNum".equals(name)){
                         //获取属性值
                         Object Num = field.get(args[i]);
-                        pageNum = (int)Num;
+                        if(null != Num){
+                            pageNum = (int)Num;
+                        }
                     }
                     if("pageSize".equals(name)){
                         //获取属性值
                         Object Size = field.get(args[i]);
-                        pageSize = (int)Size;
+                        if(null != Size){
+                            pageSize = (int)Size;;
+                        }
                     }
                 }
             }

@@ -133,8 +133,8 @@ public class SysDeptController {
 				}
 			}
 		}
-			return tree;
-		}
+		return tree;
+	}
 
 
 }

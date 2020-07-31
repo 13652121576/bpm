@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.service.mapper.sysmapper.SysUserRoleMapper">
+	 <!-- 实体映射 -->
+	 <resultMap id="BaseResultMap" type="com.manage.common.entity.sys.SysUserRole">
+		 <!--主键id-->
+		 <result column="id" property="id" jdbcType="CHAR"/>
+		 <!--用户id-->
+		 <result column="user_id" property="userId" jdbcType="CHAR"/>
+		 <!--角色id-->
+		 <result column="role_id" property="roleId" jdbcType="CHAR"/>
+		 <!--创建时间-->
+		 <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+	 </resultMap>
+	 <!-- 通用查询条件-->
+	 <sql id="sql_where_clause">
+		 <if test="userId != null and userId != ''">
+			 and user_id = #{userId}
+		 </if>
+		 <if test="roleId != null and roleId != ''">
+			 and role_id = #{roleId}
+		 </if>
+		 <if test="createTime != null and createTime != ''">
+			 and create_time = #{createTime}
+		 </if>
+	 </sql>
+
+	 <!-- 通用查询结果列-->
+	 <sql id="base_column_list">
+		 id,user_id,role_id,create_time
+	 </sql>
+
+	<!-- 查询getList -->
+	<select id="getList"  parameterType="com.manage.common.entity.sys.SysUserRole" resultMap="BaseResultMap">
+		select
+		<include refid="base_column_list" />
+		from sys_role_power
+		where 1=1
+		<include refid="sql_where_clause" />
+	</select>
+	 <!-- 添加 （动态匹配所有有值字段）-->
+	 <insert id="create" parameterType="com.manage.common.entity.sys.SysUserRole">
+		 insert into sys_role_power
+		 <trim prefix="(" suffix=")" suffixOverrides=",">
+			 id,
+			 <if test="roleId != null">role_id,</if>
+			 <if test="userId != null">user_id,</if>
+			 create_time,
+		 </trim>
+		 <trim prefix="values (" suffix=")" suffixOverrides=",">
+			 replace(uuid(),'-',''),
+			 <if test="userId != null">#{userId,jdbcType=CHAR},</if>
+			 <if test="roleId != null">#{roleId,jdbcType=CHAR},</if>
+			 now(),
+		 </trim>
+	 </insert>
+	 <!-- 修 改-->
+	 <update id="update" parameterType="com.manage.common.entity.sys.SysUserRole">
+		 update sys_role_power
+		 <set>
+			 <if test="userId != null">user_id = #{userId,jdbcType=CHAR},</if>
+			 <if test="roleId != null">role_id = #{roleId,jdbcType=CHAR},</if>
+			 <if test="createTime != null and createTime != ''">create_time = #{createTime,jdbcType=TIMESTAMP},</if>
+		 </set>
+		 where id = #{id,jdbcType=CHAR}
+	 </update>
+	<!-- 删除 （根据roleId删除）-->
+	<delete id="delete" parameterType="java.lang.String">
+		delete from sys_role_power
+		where role_id = #{roleId,jdbcType=VARCHAR}
+	</delete>
+
+</mapper>

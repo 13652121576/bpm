@@ -81,7 +81,7 @@ public class SysUserController {
 	 }
 
 	 /**
-	  * 修改用户的接口
+	  * 删除用户的接口
 	  */
 	 @ResponseBody
 	 @RequestMapping(value="/delete",method = RequestMethod.GET	)
