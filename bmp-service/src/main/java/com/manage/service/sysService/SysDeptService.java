@@ -1,6 +1,7 @@
 package com.manage.service.sysService;
 
 
+import com.manage.common.base.domain.TreeNode;
 import com.manage.common.dto.SysDeptDto;
 import com.manage.common.dto.SysUserDto;
 import com.manage.common.entity.sys.SysDept;
@@ -19,21 +20,25 @@ public interface SysDeptService {
     /**
      * getList的方法
      */
-    public List<SysDept> getList(SysDeptDto sysDeptDto);
+    List<SysDept> getList(SysDeptDto sysDeptDto);
 
     /**
      * 新增方法
      */
-    public int create(SysDeptDto sysDeptDto);
+    int create(SysDeptDto sysDeptDto);
 
     /**
      * 修改方法
      */
-    public int update(SysDeptDto sysDeptDto);
+    int update(SysDeptDto sysDeptDto);
 
     /**
      * 根据id删除方法
      */
-    public int delete(String id);
+    int delete(String id);
+    /**
+     * 获取部门树的接口
+     */
+    List<TreeNode> getDeptTree();
 
 }

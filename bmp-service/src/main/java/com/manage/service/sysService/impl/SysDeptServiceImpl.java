@@ -1,6 +1,7 @@
 package com.manage.service.sysService.impl;
 
 
+import com.manage.common.base.domain.TreeNode;
 import com.manage.common.dto.SysDeptDto;
 import com.manage.common.entity.sys.SysDept;
 import com.manage.service.annotation.pageHelper;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -47,5 +49,33 @@ public class SysDeptServiceImpl implements SysDeptService{
     @Override
     public int delete(String id) {
         return sysDeptMapper.delete(id);
+    }
+
+    @Override
+    public List<TreeNode> getDeptTree() {
+        SysDeptDto sysDeptDto = new SysDeptDto();
+        List<SysDept> treeAll = this.getList(sysDeptDto);
+        List<TreeNode> treeNode = initTree("0", treeAll);
+        return treeNode;
+    }
+
+    /**
+     * 初始化tree
+     */
+    private List<TreeNode> initTree(String topId, List<SysDept> treeAll){
+        List<TreeNode> tree = new ArrayList<TreeNode>();
+        for (SysDept sysDept:treeAll){
+            if(sysDept.getpId().equals(topId)){
+                TreeNode treeNode = new TreeNode();
+                treeNode.setId(sysDept.getId());
+                treeNode.setParentId(sysDept.getpId());
+                treeNode.setName(sysDept.getDepartmentName());
+                tree.add(treeNode);
+                for (SysDept sys:treeAll){
+                    treeNode.setChildren(initTree(sysDept.getId(),treeAll));
+                }
+            }
+        }
+        return tree;
     }
 }

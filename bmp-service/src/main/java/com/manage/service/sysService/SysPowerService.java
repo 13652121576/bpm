@@ -1,5 +1,6 @@
 package com.manage.service.sysService;
 
+import com.manage.common.base.domain.TreeNode;
 import com.manage.common.dto.SysPowerDto;
 import com.manage.common.entity.sys.SysPower;
 import java.util.List;
@@ -33,4 +34,10 @@ public interface SysPowerService {
      */
     int delete(String id);
 
+    /**
+     * 根据用户id查权限
+     */
+    List<SysPower> getPowerByUserId(String userId);
+
+    List<TreeNode> getPowerTree();
 }

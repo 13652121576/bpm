@@ -13,6 +13,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,6 +38,7 @@ public class SysRoleController {
 	 @ResponseBody
 	 @RequestMapping(value="/getList",method = RequestMethod.GET)
 	 @ApiOperation("查询角色接口")
+	 @PreAuthorize("hasAuthority('sys:role:getList')")
 	 public ServerResponse getList(SysRoleDto sysRoleDto) {
 		 logger.info("入参======info====={}",sysRoleDto.getId());
 		 logger.debug("入参=====debug======{}",sysRoleDto.getId());
@@ -63,6 +66,7 @@ public class SysRoleController {
 	 @ResponseBody
 	 @RequestMapping(value="/create",method = RequestMethod.POST)
 	 @ApiOperation("创建角色接口")
+	 @PreAuthorize("hasAuthority('sys:role:create')")
 	 public ServerResponse create(SysRoleDto sysRoleDto) {
 		 logger.info("入参======info====={}",sysRoleDto.getId());
 		 return ServerResponse.createBySuccess(sysRoleService.create(sysRoleDto));
@@ -74,6 +78,7 @@ public class SysRoleController {
 	 @ResponseBody
 	 @RequestMapping(value="/update",method = RequestMethod.POST)
 	 @ApiOperation("修改角色接口")
+	 @PreAuthorize("hasAuthority('sys:role:update')")
 	 public ServerResponse update(SysRoleDto sysRoleDto) {
 		 logger.info("入参======info====={}",sysRoleDto.getId());
 		 if(StringUtils.isEmpty(sysRoleDto.getId())){
@@ -88,6 +93,7 @@ public class SysRoleController {
 	 @ResponseBody
 	 @RequestMapping(value="/delete",method = RequestMethod.GET	)
 	 @ApiOperation("删除角色接口")
+	 @PreAuthorize("hasAuthority('sys:role:delete')")
 	 public ServerResponse delete(String id) {
 		 logger.info("入参======info====={}",id);
 		 if(StringUtils.isEmpty(id)){

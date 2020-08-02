@@ -1,6 +1,7 @@
 package com.manage.web.controller.system;
 
 import com.github.pagehelper.PageInfo;
+import com.manage.common.base.domain.TreeNode;
 import com.manage.common.dto.PageResult;
 import com.manage.common.dto.SysPowerDto;
 import com.manage.common.dto.SysUserDto;
@@ -15,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,6 +40,7 @@ public class SysPowerController {
 	 @ResponseBody
 	 @RequestMapping(value="/getList",method = RequestMethod.GET)
 	 @ApiOperation("查询权限接口")
+	 @PreAuthorize("hasAuthority('sys:power:getList')")
 	 public ServerResponse getList(SysPowerDto sysPowerDto) {
 		 logger.info("入参======info====={}",sysPowerDto.getId());
 		 logger.debug("入参=====debug======{}",sysPowerDto.getId());
@@ -65,6 +68,7 @@ public class SysPowerController {
 	 @ResponseBody
 	 @RequestMapping(value="/create",method = RequestMethod.POST)
 	 @ApiOperation("创建权限接口")
+	 @PreAuthorize("hasAuthority('sys:power:create')")
 	 public ServerResponse create(SysPowerDto sysPowerDto) {
 		 logger.info("入参======info====={}",sysPowerDto.getId());
 		 return ServerResponse.createBySuccess(sysPowerService.create(sysPowerDto));
@@ -76,6 +80,7 @@ public class SysPowerController {
 	 @ResponseBody
 	 @RequestMapping(value="/update",method = RequestMethod.POST)
 	 @ApiOperation("修改权限接口")
+	 @PreAuthorize("hasAuthority('sys:power:update')")
 	 public ServerResponse update(SysPowerDto sysPowerDto) {
 		 logger.info("入参======info====={}",sysPowerDto.getId());
 		 if(StringUtils.isEmpty(sysPowerDto.getId())){
@@ -90,6 +95,7 @@ public class SysPowerController {
 	 @ResponseBody
 	 @RequestMapping(value="/delete",method = RequestMethod.GET	)
 	 @ApiOperation("删除权限接口")
+	 @PreAuthorize("hasAuthority('sys:power:delete')")
 	 public ServerResponse delete(String id) {
 		 logger.info("入参======info====={}",id);
 		 if(StringUtils.isEmpty(id)){
@@ -97,5 +103,16 @@ public class SysPowerController {
 		 }
 		 return ServerResponse.createBySuccess(sysPowerService.delete(id));
 	 }
+
+	/**
+	 * 获取部权限树的接口
+	 */
+	@ResponseBody
+	@RequestMapping(value="/getPowerTree",method = RequestMethod.GET	)
+	@ApiOperation("获取权限树的接口")
+	public ServerResponse getPowerTree() {
+		List<TreeNode> treeNode = sysPowerService.getPowerTree();
+		return ServerResponse.createBySuccess(treeNode);
+	}
 
 }

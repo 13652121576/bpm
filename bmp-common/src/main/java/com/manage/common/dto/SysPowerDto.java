@@ -18,6 +18,16 @@ public class SysPowerDto extends SysPower {
 	/** 每页显示记录数 */
 	private Integer pageSize;
 
+	private String userId;
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
 	public Integer getPageNum() {
 		return pageNum;
 	}

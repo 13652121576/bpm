@@ -16,7 +16,7 @@ public class SysPower implements Serializable {
 	 private String id;
 
 	 /**父级id**/
-	 private String pid;
+	 private String pId;
 
 	 /**名称**/
 	 private String lableName;
@@ -69,15 +69,15 @@ public class SysPower implements Serializable {
 		 return this.id;
 	 }
 
-	 public void setPid(String pid){
-		 this.pid = pid == null ? null : pid.trim();
-	 }
+	public String getpId() {
+		return pId;
+	}
 
-	 public String getPid(){
-		 return this.pid;
-	 }
+	public void setpId(String pId) {
+		this.pId = pId;
+	}
 
-	 public void setLableName(String lableName){
+	public void setLableName(String lableName){
 		 this.lableName = lableName == null ? null : lableName.trim();
 	 }
 

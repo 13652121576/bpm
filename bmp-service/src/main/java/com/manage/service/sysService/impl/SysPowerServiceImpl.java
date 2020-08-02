@@ -1,6 +1,8 @@
 package com.manage.service.sysService.impl;
 
+import com.manage.common.base.domain.TreeNode;
 import com.manage.common.dto.SysPowerDto;
+import com.manage.common.entity.sys.SysDept;
 import com.manage.common.entity.sys.SysPower;
 import com.manage.service.annotation.pageHelper;
 import com.manage.service.mapper.sysmapper.SysPowerMapper;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -50,5 +53,38 @@ public class SysPowerServiceImpl implements SysPowerService{
     @Override
     public int delete(String id) {
         return sysPowerMapper.delete(id);
+    }
+
+    @Override
+    public List<SysPower> getPowerByUserId(String userId) {
+        return sysPowerMapper.getPowerByUserId(userId);
+    }
+
+    @Override
+    public List<TreeNode> getPowerTree() {
+        SysPowerDto sysPowerDto = new SysPowerDto();
+        List<SysPower> treeAll = this.getList(sysPowerDto);
+        List<TreeNode> treeNode = initTree("0", treeAll);
+        return treeNode;
+    }
+
+    /**
+     * 初始化tree
+     */
+    private List<TreeNode> initTree(String topId, List<SysPower> treeAll){
+        List<TreeNode> tree = new ArrayList<TreeNode>();
+        for (SysPower sysPower:treeAll){
+            if(sysPower.getpId().equals(topId)){
+                TreeNode treeNode = new TreeNode();
+                treeNode.setId(sysPower.getId());
+                treeNode.setParentId(sysPower.getpId());
+                treeNode.setName(sysPower.getLableName());
+                tree.add(treeNode);
+                for (SysPower sys:treeAll){
+                    treeNode.setChildren(initTree(sysPower.getId(),treeAll));
+                }
+            }
+        }
+        return tree;
     }
 }

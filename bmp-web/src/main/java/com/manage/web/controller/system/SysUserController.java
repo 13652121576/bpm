@@ -12,6 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +36,7 @@ public class SysUserController {
 	 @ResponseBody
 	 @RequestMapping(value="/getList",method = RequestMethod.GET)
 	 @ApiOperation("查询用户接口")
+	 @PreAuthorize("hasAuthority('sys:user:getList')")
 	 public ServerResponse getList(SysUserDto sysUserDto) {
 		 logger.info("入参======info====={}",sysUserDto.getId());
 		 logger.debug("入参=====debug======{}",sysUserDto.getId());
@@ -61,6 +64,7 @@ public class SysUserController {
 	 @ResponseBody
 	 @RequestMapping(value="/create",method = RequestMethod.POST)
 	 @ApiOperation("创建用户接口")
+	 @PreAuthorize("hasAuthority('sys:user:create')")
 	 public ServerResponse create(SysUserDto sysUserDto) {
 		 logger.info("入参======info====={}",sysUserDto.getId());
 		 return ServerResponse.createBySuccess(sysUserService.create(sysUserDto));
@@ -72,6 +76,7 @@ public class SysUserController {
 	 @ResponseBody
 	 @RequestMapping(value="/update",method = RequestMethod.POST)
 	 @ApiOperation("修改用户接口")
+	 @PreAuthorize("hasAuthority('sys:user:update')")
 	 public ServerResponse update(SysUserDto sysUserDto) {
 		 logger.info("入参======info====={}",sysUserDto.getId());
 		 if(StringUtils.isEmpty(sysUserDto.getId())){
@@ -86,6 +91,7 @@ public class SysUserController {
 	 @ResponseBody
 	 @RequestMapping(value="/delete",method = RequestMethod.GET	)
 	 @ApiOperation("删除用户接口")
+	 @PreAuthorize("hasAuthority('sys:user:delete')")
 	 public ServerResponse delete(String id) {
 		 logger.info("入参======info====={}",id);
 		 if(StringUtils.isEmpty(id)){

@@ -19,6 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -43,6 +44,7 @@ public class SysDeptController {
 	 @ResponseBody
 	 @RequestMapping(value="/getList",method = RequestMethod.GET)
 	 @ApiOperation("查询部门接口")
+	 @PreAuthorize("hasAuthority('sys:dept:getList')")
 	 public ServerResponse getList(SysDeptDto sysDeptDto) {
 		 logger.info("入参======info====={}",JSONObject.toJSON(sysDeptDto));
 		 logger.debug("入参=====debug======{}",JSONObject.toJSON(sysDeptDto));
@@ -70,6 +72,7 @@ public class SysDeptController {
 	 @ResponseBody
 	 @RequestMapping(value="/create",method = RequestMethod.POST)
 	 @ApiOperation("创建部门接口")
+	 @PreAuthorize("hasAuthority('sys:dept:create')")
 	 public ServerResponse create(SysDeptDto sysDeptDto) {
 		 logger.info("入参======info====={}",sysDeptDto.getId());
 		 return ServerResponse.createBySuccess(sysDeptService.create(sysDeptDto));
@@ -81,6 +84,7 @@ public class SysDeptController {
 	 @ResponseBody
 	 @RequestMapping(value="/update",method = RequestMethod.POST)
 	 @ApiOperation("修改部门接口")
+	 @PreAuthorize("hasAuthority('sys:dept:update')")
 	 public ServerResponse update(SysDeptDto sysDeptDto) {
 		 logger.info("入参======info====={}",sysDeptDto.getId());
 		 if(StringUtils.isEmpty(sysDeptDto.getId())){
@@ -95,6 +99,7 @@ public class SysDeptController {
 	 @ResponseBody
 	 @RequestMapping(value="/delete",method = RequestMethod.GET	)
 	 @ApiOperation("删除部门接口")
+	 @PreAuthorize("hasAuthority('sys:dept:delete')")
 	 public ServerResponse delete(String id) {
 		 logger.info("入参======info====={}",id);
 		 if(StringUtils.isEmpty(id)){
@@ -109,31 +114,9 @@ public class SysDeptController {
 	@ResponseBody
 	@RequestMapping(value="/getDeptTree",method = RequestMethod.GET	)
 	@ApiOperation("获取部门树的接口")
-	public ServerResponse getDeptTree(SysDeptDto sysDeptDto) {
-		logger.info("入参======info====={}", JSONObject.toJSON(sysDeptDto));
-		List<SysDept> treeAll = sysDeptService.getList(sysDeptDto);
-		List<TreeNode> treeNode = initTree("0", treeAll);
+	public ServerResponse getDeptTree() {
+		List<TreeNode> treeNode = sysDeptService.getDeptTree();
 		return ServerResponse.createBySuccess(treeNode);
-	}
-
-	/**
-	 * 初始化tree
-	 */
-	private List<TreeNode> initTree(String topId,List<SysDept> treeAll){
-		List<TreeNode> tree = new ArrayList<TreeNode>();
-		for (SysDept sysDept:treeAll){
-			if(sysDept.getpId().equals(topId)){
-				TreeNode treeNode = new TreeNode();
-				treeNode.setId(sysDept.getId());
-				treeNode.setParentId(sysDept.getpId());
-				treeNode.setName(sysDept.getDepartmentName());
-				tree.add(treeNode);
-				for (SysDept sys:treeAll){
-					treeNode.setChildren(initTree(sysDept.getId(),treeAll));
-				}
-			}
-		}
-		return tree;
 	}
 
 

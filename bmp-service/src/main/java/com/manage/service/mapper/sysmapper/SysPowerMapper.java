@@ -36,5 +36,11 @@ public interface SysPowerMapper{
 	  *
 	  */
 	 int delete(String id);
+	/**
+	 *
+	 * 根据用户ID查权限
+	 *
+	 */
+	List<SysPower> getPowerByUserId(String userId);
 
 }
