@@ -56,6 +56,9 @@ public class SysAuthenctiationFailureHandler extends SimpleUrlAuthenticationFail
 		}else if (exception instanceof InternalAuthenticationServiceException) {
 			//参数缺失
 			result = ServerResponse.createByErrorMessage(ResultCode.PARAM_NOT_COMPLETE.getMessage());
+		}else if (exception instanceof AuthenticationServiceException) {
+			//不支持get
+			result = ServerResponse.createByErrorMessage(ResultCode.PARAM_NOT_COMPLETE.getMessage());
 		}else{
 			//其他错误
 			result = ServerResponse.createByErrorMessage(ResultCode.COMMON_FAIL.getMessage());
