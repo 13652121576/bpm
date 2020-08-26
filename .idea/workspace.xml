@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd221cac-08b7-45c3-931f-e2098fba18cb" name="Default" comment="json login">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bmp-common/target/classes/com/manage/common/handler/GlobalExceptionHandler.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/config/SwaggerConfig.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/config/SwaggerConfig.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-common/target/bmp-common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/bmp-common/target/bmp-common-1.0-SNAPSHOT.jar" />
@@ -42,7 +42,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/bmp-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/bmp-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/bmp-web.iml" afterPath="$PROJECT_DIR$/bmp-web/bmp-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SecurityConfig.java" afterPath="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/SpringbootApplication.java" afterPath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/SpringbootApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysDeptController.java" afterPath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysDeptController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysPowerController.java" afterPath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysPowerController.java" />
@@ -50,7 +49,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysUserController.java" afterPath="$PROJECT_DIR$/bmp-web/target/classes/com/manage/web/controller/system/SysUserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/bmp-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/bmp-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bmp.iml" afterPath="$PROJECT_DIR$/bmp.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/handler/GlobalExceptionHandler.java" afterPath="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/handler/GlobalExceptionHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,21 +85,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SecurityConfig.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="51" column="66" lean-forward="false" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+            <state relative-caret-position="330">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysAuthenticationProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationProvider.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bmp-web/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonLogin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/handler/GlobalExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="134" column="61" lean-forward="false" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysAuthenctiationFailureHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenctiationFailureHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="58" column="69" lean-forward="false" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-service/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-common/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/sysenum/ResultCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/util/ServerResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -150,11 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bmp-service/src/main/java/com/manage/service/aop/pageCommonAspect.java" />
-        <option value="$PROJECT_DIR$/bmp-service/src/main/resources/bpm.sql" />
-        <option value="$PROJECT_DIR$/bmp-service/src/main/java/com/manage/service/sysService/SysDeptService.java" />
-        <option value="$PROJECT_DIR$/bmp-service/src/main/java/com/manage/service/sysService/impl/SysDeptServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/entity/sys/SysPower.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/Security/ValidateCodeFilter.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/MyPasswordEncoder.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/MyLogoutSuccessHandler.java" />
@@ -189,18 +265,23 @@
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/controller/system/SysPowerController.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/controller/system/SysDeptController.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenctiationFailureHandler.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JwtAuthenticationTokenFilter.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysUserDetailService.java" />
-        <option value="$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/sysenum/ResultCode.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationEntryPoint.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/CustomUsernamePasswordAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/bmp-web/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java" />
         <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java" />
+        <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/handler/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/sysenum/ResultCode.java" />
+        <option value="$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenctiationFailureHandler.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/bmp-common/.gitignore" />
+        <option value="$PROJECT_DIR$/bmp-service/.gitignore" />
+        <option value="$PROJECT_DIR$/bmp-web/.gitignore" />
       </list>
     </option>
   </component>
@@ -228,11 +309,6 @@
         <option value="dev" />
       </list>
     </option>
-    <option name="disabledProfiles">
-      <list>
-        <option value="prod" />
-      </list>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -243,11 +319,11 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bmp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="bmp-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bmp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="bmp-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -301,6 +377,118 @@
             <path>
               <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
               <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
+              <item name="bmp-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmp" type="462c0819:PsiDirectoryNode" />
               <item name="bmp-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -377,7 +565,7 @@
               <item name="manage" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bmp" type="b2602c69:ProjectViewProjectNode" />
@@ -397,7 +585,12 @@
               <item name="bmp-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -427,15 +620,11 @@
     <property name="ToolWindowCoverage.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myselfwork\bmp\bmp-service\src\main\resources\mapper\sysMapper" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myselfwork\bmp\bmp-web\src\main\java\com\manage\web\config" />
-      <recent name="D:\myselfwork\bmp\bmp-service\src\main\resources" />
-      <recent name="D:\myselfwork\bmp\bmp-service\src\main\java\com\manage\service\sysService" />
-      <recent name="D:\myselfwork\bmp\bmp-service\src\main\resources\mapper\sysmapper" />
-      <recent name="D:\myselfwork\bmp\bmp-service\src\main\java\com\manage\service\mapper\sysmapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.manage.common.util" />
@@ -444,8 +633,12 @@
       <recent name="com.manage.service.sysService" />
       <recent name="com.manage.service.mapper.sysmapper" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myselfwork\bmp\bmp-service\src\main\resources\mapper\sysMapper" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myselfwork\bmp\bmp-common" />
+      <recent name="D:\myselfwork\bmp\bmp-service" />
+      <recent name="D:\myselfwork\bmp\bmp-web" />
+      <recent name="D:\myselfwork\bmp\bmp-web\src\main\java\com\manage\web\config" />
+      <recent name="D:\myselfwork\bmp\bmp-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -570,7 +763,7 @@
       <workItem from="1597064289933" duration="1964000" />
       <workItem from="1597292599548" duration="602000" />
       <workItem from="1597650890011" duration="601000" />
-      <workItem from="1598230753477" duration="14336000" />
+      <workItem from="1598230753477" duration="16774000" />
     </task>
     <task id="LOCAL-00001" summary="spring security jwt">
       <created>1596362054273</created>
@@ -579,11 +772,25 @@
       <option name="project" value="LOCAL" />
       <updated>1596362054273</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="json login">
+      <created>1598418718036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598418718036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="json login">
+      <created>1598422685139</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598422685139</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149651000" />
+    <option name="totallyTimeSpent" value="152089000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -599,7 +806,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28969958" sideWeight="0.52595156" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14860515" sideWeight="0.52595156" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -607,7 +814,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44094488" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34758157" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42857143" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -616,8 +823,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38695163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845894" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32845894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3642704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3642704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -700,7 +907,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="78" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -709,83 +916,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/boot/spring-boot/2.1.6.RELEASE/spring-boot-2.1.6.RELEASE.jar!/org/springframework/boot/web/servlet/server/ServletWebServerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE.jar!/org/springframework/ui/context/support/UiApplicationContextUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/context/support/GenericWebApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-          <folding>
-            <element signature="e#2097#2098#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#3303#3304#0" expanded="true" />
-            <element signature="e#3385#3386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/boot/spring-boot/2.1.6.RELEASE/spring-boot-2.1.6.RELEASE.jar!/org/springframework/boot/web/servlet/context/ServletWebServerApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="260" column="16" lean-forward="false" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/boot/spring-boot/2.1.6.RELEASE/spring-boot-2.1.6.RELEASE.jar!/org/springframework/boot/SpringBootConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/AutoConfigurationPackage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/Maven/Repository/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/install/Maven/Repository/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/method/configuration/EnableGlobalMethodSecurity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -860,14 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysUserDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/install/Maven/Repository/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/UsernamePasswordAuthenticationToken.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -897,16 +1019,6 @@
         <state relative-caret-position="114">
           <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,6 +1222,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -1118,10 +1238,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysUserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="5">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/JsonLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/util/ServerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-common/src/main/java/com/manage/common/sysenum/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/handler/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="134" column="61" lean-forward="false" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-web/src/main/java/com/manage/web/config/security/SysAuthenctiationFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="58" column="69" lean-forward="false" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-common/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-service/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bmp-web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

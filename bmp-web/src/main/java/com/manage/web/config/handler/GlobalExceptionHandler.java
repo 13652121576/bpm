@@ -1,7 +1,6 @@
-package com.manage.common.handler;
+package com.manage.web.config.handler;
 
 
-import com.alibaba.fastjson.JSON;
 import com.manage.common.util.ServerResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +9,7 @@ import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
@@ -132,6 +132,8 @@ public class GlobalExceptionHandler {
     private <T extends Throwable> ServerResponse resultFormat(int code, T ex) {
         if(ex instanceof RuntimeException){
             return ServerResponse.createByErrorCodeMessage(500,"服务器异常");
+        }else if(ex instanceof AuthenticationServiceException){
+            return ServerResponse.createByErrorCodeMessage(1,"认证异常");
         }
         return ServerResponse.createByErrorCodeMessage(code,ex.getMessage().toString());
     }
