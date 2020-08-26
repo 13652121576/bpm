@@ -44,11 +44,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilterBefore(jwtAuthenticationTokenFilter,UsernamePasswordAuthenticationFilter.class)
+                .antMatcher("/login")
                 .authorizeRequests().anyRequest().authenticated()
              .and()
+                .addFilterBefore(getJsonLogin(),UsernamePasswordAuthenticationFilter.class)
                 .formLogin().loginPage("/login").permitAll()//登录允许所有用户
-                .failureHandler(sysAuthenctiationFailureHandler)
-                .successHandler(sysAuthenticationSuccessHandler)
+//                .failureHandler(sysAuthenctiationFailureHandler)
+//                .successHandler(sysAuthenticationSuccessHandler)
              .and()
                 .exceptionHandling()
                 .authenticationEntryPoint(sysAuthenticationEntryPoint)
@@ -58,8 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .deleteCookies("JSESSIONID")//删除当前的JSESSIONID
              .and()
                 .cors().and().csrf().disable();//禁止跨站伪造请求关闭
-
-            }
+    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -74,6 +75,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //指定我们自己的userDetailsService
         //开启自定义认证方式
         auth.userDetailsService(userDetailsService).passwordEncoder(new SysPasswordEncoder());
+    }
+
+    @Bean
+    JsonLogin getJsonLogin() throws Exception {
+        JsonLogin filter = new JsonLogin();
+        filter.setAuthenticationManager(super.authenticationManagerBean());
+        filter.setFilterProcessesUrl("/login");
+        filter.setAuthenticationSuccessHandler(sysAuthenticationSuccessHandler);
+        filter.setAuthenticationFailureHandler(sysAuthenctiationFailureHandler);
+        return filter;
     }
 }
 
